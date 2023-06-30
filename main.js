@@ -84,16 +84,16 @@ function generateItems() {
     var itemsContainer = $('#items-container') 
     itemsContainer.empty()
     var searchInput = $('#search-input').val().toLowerCase() 
-    var filteredData = data.filter(function(item) { 
-      return item.name.toLowerCase().includes(searchInput)
+    var filteredData = data.filter(function(e) { 
+      return e.name.toLowerCase().includes(searchInput)
       
     })
-    filteredData.forEach(function(item) {
+    filteredData.forEach(function(e) { 
       var itemHTML = `
         <div class="item">
-          <img src="${item.imgSrc}" alt="${item.name}">
-          <h3>${item.name}</h3>
-          <p>Price: ${item.price}</p>
+          <img src="${e.imgSrc}" alt="${e.name}">
+          <h3>${e.name}</h3>
+          <p>Price: ${e.price}</p>
         </div>`
       
   
